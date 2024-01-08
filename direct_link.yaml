@@ -5,14 +5,15 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 192.168.1.4:7890, server: 192.168.1.4, port: 7890, type: http, cipher: chacha20-ietf, password: , protocol: , obfs: , protocol-param: , obfs-param: ""}
-  - {name: 192.168.1.4:1145, server: 192.168.1.4, port: 1145, type: http, cipher: chacha20-ietf, password: , protocol: , obfs: , protocol-param: , obfs-param: ""}
-  - {name: 192.168.1.10:1145, server: 192.168.1.10, port: 1145, type: http, cipher: chacha20-ietf, password: , protocol: , obfs: , protocol-param: , obfs-param: ""}
-  - {name: 192.168.123.25:7890, server: 192.168.123.25, port: 7890, type: http, cipher: chacha20-ietf, password: , protocol: , obfs: , protocol-param: , obfs-param: ""}
-  - {name: 192.168.123.25:1145, server: 192.168.123.25, port: 1145, type: http, cipher: chacha20-ietf, password: , protocol: , obfs: , protocol-param: , obfs-param: ""}
-  - {name: 192.168.123.30:1145, server: 192.168.123.30, port: 1145, type: http, cipher: chacha20-ietf, password: , protocol: , obfs: , protocol-param: , obfs-param: ""}
-  - {name: 192.168.123.81:1145, server: 192.168.123.25, port: 1145, type: http, cipher: chacha20-ietf, password: , protocol: , obfs: , protocol-param: , obfs-param: ""}
-  - {name: 192.168.43.161:1145, server: 192.168.43.161, port: 1145, type: http, cipher: chacha20-ietf, password: , protocol: , obfs: , protocol-param: , obfs-param: ""}
+  - {name: 192.168.0.102-V2Ray, server:  192.168.0.102, port: 1145, type: http, cipher: chacha20-ietf, password: , protocol: , obfs: , protocol-param: , obfs-param: ""}
+  - {name: 192.168.1.4-Clash, server: 192.168.1.4, port: 7890, type: http, cipher: chacha20-ietf, password: , protocol: , obfs: , protocol-param: , obfs-param: ""}
+  - {name: 192.168.1.4-V2Ray, server: 192.168.1.4, port: 1145, type: http, cipher: chacha20-ietf, password: , protocol: , obfs: , protocol-param: , obfs-param: ""}
+  - {name: 192.168.1.10-V2Ray, server: 192.168.1.10, port: 1145, type: http, cipher: chacha20-ietf, password: , protocol: , obfs: , protocol-param: , obfs-param: ""}
+  - {name: 192.168.123.25-Clash, server: 192.168.123.25, port: 7890, type: http, cipher: chacha20-ietf, password: , protocol: , obfs: , protocol-param: , obfs-param: ""}
+  - {name: 192.168.123.25-V2Ray, server: 192.168.123.25, port: 1145, type: http, cipher: chacha20-ietf, password: , protocol: , obfs: , protocol-param: , obfs-param: ""}
+  - {name: 192.168.123.30-V2Ray, server: 192.168.123.30, port: 1145, type: http, cipher: chacha20-ietf, password: , protocol: , obfs: , protocol-param: , obfs-param: ""}
+  - {name: 192.168.123.81-V2Ray, server: 192.168.123.25, port: 1145, type: http, cipher: chacha20-ietf, password: , protocol: , obfs: , protocol-param: , obfs-param: ""}
+  - {name: 192.168.43.161-V2Ray, server: 192.168.43.161, port: 1145, type: http, cipher: chacha20-ietf, password: , protocol: , obfs: , protocol-param: , obfs-param: ""}
 
 proxy-groups:
 - name: 🧩 谷歌服务
@@ -22,14 +23,15 @@ proxy-groups:
     - ♿️ 故障转移
     - 🔰 负载均衡
     - DIRECT
-    - 192.168.1.4:7890
-    - 192.168.1.4:1145
-    - 192.168.1.10:1145
-    - 192.168.123.25:7890
-    - 192.168.123.25:1145
-    - 192.168.123.30:1145
-    - 192.168.123.81:1145
-    - 192.168.43.161:1145
+    - 192.168.0.102-V2Ray
+    - 192.168.1.4-Clash
+    - 192.168.1.4-V2Ray
+    - 192.168.1.10-V2Ray
+    - 192.168.123.25-Clash
+    - 192.168.123.25-V2Ray
+    - 192.168.123.30-V2Ray
+    - 192.168.123.81-V2Ray
+    - 192.168.43.161-V2Ray
 
 - name: 🌎 全球直连
   type: select
@@ -40,14 +42,15 @@ proxy-groups:
   type: url-test
   proxies:
     - DIRECT
-    - 192.168.1.4:7890
-    - 192.168.1.4:1145
-    - 192.168.1.10:1145
-    - 192.168.123.25:7890
-    - 192.168.123.25:1145
-    - 192.168.123.30:1145
-    - 192.168.123.81:1145
-    - 192.168.43.161:1145
+    - 192.168.0.102-V2Ray
+    - 192.168.1.4-Clash
+    - 192.168.1.4-V2Ray
+    - 192.168.1.10-V2Ray
+    - 192.168.123.25-Clash
+    - 192.168.123.25-V2Ray
+    - 192.168.123.30-V2Ray
+    - 192.168.123.81-V2Ray
+    - 192.168.43.161-V2Ray
   url: http://www.google.com/generate_204
   interval: 300
 
@@ -55,28 +58,30 @@ proxy-groups:
   type: load-balance
   proxies:
     - DIRECT
-    - 192.168.1.4:7890
-    - 192.168.1.4:1145
-    - 192.168.1.10:1145
-    - 192.168.123.25:7890
-    - 192.168.123.25:1145
-    - 192.168.123.30:1145
-    - 192.168.123.81:1145
-    - 192.168.43.161:1145
+    - 192.168.0.102-V2Ray
+    - 192.168.1.4-Clash
+    - 192.168.1.4-V2Ray
+    - 192.168.1.10-V2Ray
+    - 192.168.123.25-Clash
+    - 192.168.123.25-V2Ray
+    - 192.168.123.30-V2Ray
+    - 192.168.123.81-V2Ray
+    - 192.168.43.161-V2Ray
   url: http://www.google.com/generate_204
   interval: 300
 
 - name: ♿️ 故障转移
   type: fallback
   proxies:
-    - 192.168.1.4:7890
-    - 192.168.1.4:1145
-    - 192.168.1.10:1145
-    - 192.168.123.25:7890
-    - 192.168.123.25:1145
-    - 192.168.123.30:1145
-    - 192.168.123.81:1145
-    - 192.168.43.161:1145
+    - 192.168.0.102-V2Ray
+    - 192.168.1.4-Clash
+    - 192.168.1.4-V2Ray
+    - 192.168.1.10-V2Ray
+    - 192.168.123.25-Clash
+    - 192.168.123.25-V2Ray
+    - 192.168.123.30-V2Ray
+    - 192.168.123.81-V2Ray
+    - 192.168.43.161-V2Ray
   url: http://www.google.com/generate_204
   interval: 300
 
@@ -93,14 +98,15 @@ proxy-groups:
     - ♻️ 自动选择
     - 🔰 负载均衡
     - ♿️ 故障转移
-    - 192.168.1.4:7890
-    - 192.168.1.4:1145
-    - 192.168.1.10:1145
-    - 192.168.123.25:7890
-    - 192.168.123.25:1145
-    - 192.168.123.30:1145
-    - 192.168.123.81:1145
-    - 192.168.43.161:1145
+    - 192.168.0.102-V2Ray
+    - 192.168.1.4-Clash
+    - 192.168.1.4-V2Ray
+    - 192.168.1.10-V2Ray
+    - 192.168.123.25-Clash
+    - 192.168.123.25-V2Ray
+    - 192.168.123.30-V2Ray
+    - 192.168.123.81-V2Ray
+    - 192.168.43.161-V2Ray
 
 rules:
  - DOMAIN-SUFFIX,acl4.ssr,🌎 全球直连
