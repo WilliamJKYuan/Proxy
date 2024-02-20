@@ -6,8 +6,8 @@ log-level: info
 external-controller: :9090
 proxies:
   - {name: 192.168.0.102-V2Ray, server:  192.168.0.102, port: 1145, type: http, cipher: chacha20-ietf, password: , protocol: , obfs: , protocol-param: , obfs-param: ""}
-  - {name: 192.168.1.4-Clash, server: 192.168.1.4, port: 7890, type: http, cipher: chacha20-ietf, password: , protocol: , obfs: , protocol-param: , obfs-param: ""}
-  - {name: 192.168.1.4-V2Ray, server: 192.168.1.4, port: 1145, type: http, cipher: chacha20-ietf, password: , protocol: , obfs: , protocol-param: , obfs-param: ""}
+  - {name: 192.168.1.3-Clash, server: 192.168.1.3, port: 7890, type: http, cipher: chacha20-ietf, password: , protocol: , obfs: , protocol-param: , obfs-param: ""}
+  - {name: 192.168.1.3-V2Ray, server: 192.168.1.3, port: 1145, type: http, cipher: chacha20-ietf, password: , protocol: , obfs: , protocol-param: , obfs-param: ""}
   - {name: 192.168.1.10-V2Ray, server: 192.168.1.10, port: 1145, type: http, cipher: chacha20-ietf, password: , protocol: , obfs: , protocol-param: , obfs-param: ""}
   - {name: 192.168.123.25-Clash, server: 192.168.123.25, port: 7890, type: http, cipher: chacha20-ietf, password: , protocol: , obfs: , protocol-param: , obfs-param: ""}
   - {name: 192.168.123.25-V2Ray, server: 192.168.123.25, port: 1145, type: http, cipher: chacha20-ietf, password: , protocol: , obfs: , protocol-param: , obfs-param: ""}
@@ -24,8 +24,8 @@ proxy-groups:
     - 🔰 负载均衡
     - DIRECT
     - 192.168.0.102-V2Ray
-    - 192.168.1.4-Clash
-    - 192.168.1.4-V2Ray
+    - 192.168.1.3-Clash
+    - 192.168.1.3-V2Ray
     - 192.168.1.10-V2Ray
     - 192.168.123.25-Clash
     - 192.168.123.25-V2Ray
@@ -43,8 +43,8 @@ proxy-groups:
   proxies:
     - DIRECT
     - 192.168.0.102-V2Ray
-    - 192.168.1.4-Clash
-    - 192.168.1.4-V2Ray
+    - 192.168.1.3-Clash
+    - 192.168.1.3-V2Ray
     - 192.168.1.10-V2Ray
     - 192.168.123.25-Clash
     - 192.168.123.25-V2Ray
@@ -59,8 +59,8 @@ proxy-groups:
   proxies:
     - DIRECT
     - 192.168.0.102-V2Ray
-    - 192.168.1.4-Clash
-    - 192.168.1.4-V2Ray
+    - 192.168.1.3-Clash
+    - 192.168.1.3-V2Ray
     - 192.168.1.10-V2Ray
     - 192.168.123.25-Clash
     - 192.168.123.25-V2Ray
@@ -74,8 +74,8 @@ proxy-groups:
   type: fallback
   proxies:
     - 192.168.0.102-V2Ray
-    - 192.168.1.4-Clash
-    - 192.168.1.4-V2Ray
+    - 192.168.1.3-Clash
+    - 192.168.1.3-V2Ray
     - 192.168.1.10-V2Ray
     - 192.168.123.25-Clash
     - 192.168.123.25-V2Ray
@@ -99,8 +99,8 @@ proxy-groups:
     - 🔰 负载均衡
     - ♿️ 故障转移
     - 192.168.0.102-V2Ray
-    - 192.168.1.4-Clash
-    - 192.168.1.4-V2Ray
+    - 192.168.1.3-Clash
+    - 192.168.1.3-V2Ray
     - 192.168.1.10-V2Ray
     - 192.168.123.25-Clash
     - 192.168.123.25-V2Ray
