@@ -16,7 +16,7 @@ proxies:
   - {name: 192.168.123.30-V2Ray, server: 192.168.123.30, port: 1145, type: http, cipher: chacha20-ietf, password: , protocol: , obfs: , protocol-param: , obfs-param: ""}
   - {name: 192.168.123.81-V2Ray, server: 192.168.123.25, port: 1145, type: http, cipher: chacha20-ietf, password: , protocol: , obfs: , protocol-param: , obfs-param: ""}
   - {name: 192.168.43.161-V2Ray, server: 192.168.43.161, port: 1145, type: http, cipher: chacha20-ietf, password: , protocol: , obfs: , protocol-param: , obfs-param: ""}
-  - {name: 10.5.78.232-V2Ray, server: 10.5.78.232, port: 1145, type: http, cipher: chacha20-ietf, password: , protocol: , obfs: , protocol-param: , obfs-param: ""}
+  - {name: 10.240.188.98-V2Ray, server: 10.5.78.232, port: 1145, type: http, cipher: chacha20-ietf, password: , protocol: , obfs: , protocol-param: , obfs-param: ""}
   - {name: 10.240.188.185-Mihomo, server: 10.240.188.185, port: 7892, type: http, cipher: chacha20-ietf, password: , protocol: , obfs: , protocol-param: , obfs-param: ""}
 
 proxy-groups:
